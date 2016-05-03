@@ -11,7 +11,7 @@ import Parse
 import AVFoundation
 
 
-class RegisterSensor : UITableViewController, AVCaptureMetadataOutputObjectsDelegate{
+class RegisterSensor : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     
     @IBOutlet weak var sensorID: UITextField!
     @IBOutlet weak var sensorType: UITextField!
@@ -24,6 +24,10 @@ class RegisterSensor : UITableViewController, AVCaptureMetadataOutputObjectsDele
     var objCaptureSession:AVCaptureSession?
     var objCaptureVideoPreviewLayer:AVCaptureVideoPreviewLayer?
     var vwQRCode:UIView?
+    
+    override func viewDidLoad() {
+        sensorID.text = fourUniqueDigits
+    }
     
     @IBAction func submitSensorRegistration(sender: AnyObject) {
         
@@ -63,7 +67,7 @@ class RegisterSensor : UITableViewController, AVCaptureMetadataOutputObjectsDele
     }
     func reset(){
         
-        self.sensorID.text = ""
+        self.sensorID.text = self.sensorID.text
         self.sensorType.text = ""
         self.manufacturerID.text = ""
         self.batchID.text = ""
@@ -148,11 +152,12 @@ class RegisterSensor : UITableViewController, AVCaptureMetadataOutputObjectsDele
                     dict.append(keyValue[1])
                 }
                 
-                sensorID.text = dict[0]
-                sensorType.text = dict[1]
-                manufacturerID.text = dict[2]
-                batchID.text = dict[3]
-                installed.on = dict[4] == "true"
+                //sensorID.text = dict[0]
+                sensorID.text = self.sensorID.text
+                sensorType.text = dict[0]
+                manufacturerID.text = dict[1]
+                batchID.text = dict[2]
+                installed.on = dict[3] == "true"
                 
                 objCaptureSession?.stopRunning()
                 objCaptureVideoPreviewLayer?.removeFromSuperlayer()
@@ -160,6 +165,16 @@ class RegisterSensor : UITableViewController, AVCaptureMetadataOutputObjectsDele
                 
             }
         }
+    }
+    
+    var fourUniqueDigits: String {
+        var result = ""
+        repeat {
+            // create a string with up to 4 leading zeros with a random number 0...9999
+            result = String(format:"%04d", arc4random_uniform(10000) )
+            // generate another random number if the set of characters count is less than four
+        } while Set<Character>(result.characters).count < 4
+        return result    // ran 5 times
     }
     
 }

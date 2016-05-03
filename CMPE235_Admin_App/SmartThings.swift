@@ -12,6 +12,8 @@ import UIKit
 class SmartThings {
     
     var id:String
+    var status:Bool!
+    var location: String!
     
     init(id:String){
         self.id = id
@@ -21,6 +23,7 @@ class SmartThings {
 
 
 class SmartTrees: SmartThings {
+    
     override init(id:String){
         super.init(id: id)
     }

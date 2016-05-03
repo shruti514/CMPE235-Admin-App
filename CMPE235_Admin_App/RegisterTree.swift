@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import AVFoundation
 
-class RegisterTree : UITableViewController, AVCaptureMetadataOutputObjectsDelegate{
+class RegisterTree : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     
     
     @IBOutlet weak var treeID: UITextField!
@@ -22,6 +22,10 @@ class RegisterTree : UITableViewController, AVCaptureMetadataOutputObjectsDelega
     var objCaptureSession:AVCaptureSession?
     var objCaptureVideoPreviewLayer:AVCaptureVideoPreviewLayer?
     var vwQRCode:UIView?
+    
+    override func viewDidLoad() {
+        self.treeID.text = fourUniqueDigits
+    }
     
     @IBAction func submitTree(sender: UIButton) {
         
@@ -61,12 +65,11 @@ class RegisterTree : UITableViewController, AVCaptureMetadataOutputObjectsDelega
     
     func reset(){
         
-        self.treeID.text = ""
+        self.treeID.text = treeID.text
         self.profile.text = ""
         self.manufacturerID.text = ""
         self.batchID.text = ""
         self.installed.on = true
-        
     }
     
     
@@ -145,11 +148,12 @@ class RegisterTree : UITableViewController, AVCaptureMetadataOutputObjectsDelega
                     dict.append(keyValue[1])
                 }
                 
-                treeID.text = dict[0]
-                profile.text = dict[1]
-                manufacturerID.text = dict[2]
-                batchID.text = dict[3]
-                installed.on = dict[4] == "true"
+                //treeID.text = dict[0]
+                treeID.text = treeID.text
+                profile.text = dict[0]
+                manufacturerID.text = dict[1]
+                batchID.text = dict[2]
+                installed.on = dict[3] == "true"
                 
                 objCaptureSession?.stopRunning()
                 objCaptureVideoPreviewLayer?.removeFromSuperlayer()
@@ -157,6 +161,16 @@ class RegisterTree : UITableViewController, AVCaptureMetadataOutputObjectsDelega
                 
             }
         }
+    }
+    
+    var fourUniqueDigits: String {
+        var result = ""
+        repeat {
+            // create a string with up to 4 leading zeros with a random number 0...9999
+            result = String(format:"%04d", arc4random_uniform(10000) )
+            // generate another random number if the set of characters count is less than four
+        } while Set<Character>(result.characters).count < 4
+        return result    // ran 5 times
     }
 }
 

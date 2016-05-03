@@ -10,14 +10,16 @@ import UIKit
 class RegistrationModal: UIViewController {
     
     @IBAction func registerTree(sender: AnyObject) {
-        
+        let registerTree = storyboard?.instantiateViewControllerWithIdentifier("RegisterTree") as! RegisterTree
+        registerTree.modalPresentationStyle = .OverCurrentContext
         
     }
     
     
     @IBAction func registerSensor(sender: AnyObject) {
         
-        
+        let registerSensor = storyboard?.instantiateViewControllerWithIdentifier("RegisterSensor") as! RegisterSensor
+        registerSensor.modalPresentationStyle = .OverCurrentContext
         
     }
     

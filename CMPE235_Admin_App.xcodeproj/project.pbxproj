@@ -13,6 +13,13 @@
 		A1A445721CD7F68100EA7A90 /* RegisterSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445711CD7F68100EA7A90 /* RegisterSensor.swift */; };
 		A1A445741CD8009F00EA7A90 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445731CD8009F00EA7A90 /* SplashScreen.swift */; };
 		A1A445771CD8018800EA7A90 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445761CD8018800EA7A90 /* LoginController.swift */; };
+		A1A4457A1CD82EBB00EA7A90 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445791CD82EBB00EA7A90 /* SlideViewController.swift */; };
+		A1A4457F1CD82F2F00EA7A90 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A4457E1CD82F2F00EA7A90 /* SWRevealViewController.m */; };
+		A1A445831CD8DB9800EA7A90 /* MonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445821CD8DB9800EA7A90 /* MonitorViewController.swift */; };
+		A1A445861CD903BF00EA7A90 /* MonitoringRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445851CD903BF00EA7A90 /* MonitoringRecords.swift */; };
+		A1A445881CD9179F00EA7A90 /* MonitorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445871CD9179E00EA7A90 /* MonitorTableViewCell.swift */; };
+		A1A4458A1CD91AA100EA7A90 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445891CD91AA100EA7A90 /* DetailsViewController.swift */; };
+		A1A4458E1CD91CFD00EA7A90 /* VisitorsRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4458D1CD91CFD00EA7A90 /* VisitorsRecordCell.swift */; };
 		A1C0B9CA1CD6870D00B2892D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0B9C91CD6870D00B2892D /* AppDelegate.swift */; };
 		A1C0B9D11CD6870D00B2892D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C0B9CF1CD6870D00B2892D /* Main.storyboard */; };
 		A1C0B9D31CD6870D00B2892D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C0B9D21CD6870D00B2892D /* Assets.xcassets */; };
@@ -53,6 +60,15 @@
 		A1A445711CD7F68100EA7A90 /* RegisterSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterSensor.swift; sourceTree = "<group>"; };
 		A1A445731CD8009F00EA7A90 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		A1A445761CD8018800EA7A90 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A1A445791CD82EBB00EA7A90 /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		A1A4457E1CD82F2F00EA7A90 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A1A445801CD82F6B00EA7A90 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		A1A445821CD8DB9800EA7A90 /* MonitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorViewController.swift; sourceTree = "<group>"; };
+		A1A445841CD8DD1900EA7A90 /* CMPE235_Admin_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMPE235_Admin_App-Bridging-Header.h"; sourceTree = "<group>"; };
+		A1A445851CD903BF00EA7A90 /* MonitoringRecords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitoringRecords.swift; sourceTree = "<group>"; };
+		A1A445871CD9179E00EA7A90 /* MonitorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorTableViewCell.swift; sourceTree = "<group>"; };
+		A1A445891CD91AA100EA7A90 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A1A4458D1CD91CFD00EA7A90 /* VisitorsRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsRecordCell.swift; sourceTree = "<group>"; };
 		A1C0B9C61CD6870D00B2892D /* CMPE235_Admin_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMPE235_Admin_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C0B9C91CD6870D00B2892D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C0B9D01CD6870D00B2892D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +81,6 @@
 		A1C0B9E71CD6870D00B2892D /* CMPE235_Admin_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMPE235_Admin_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C0B9EB1CD6870D00B2892D /* CMPE235_Admin_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPE235_Admin_AppUITests.swift; sourceTree = "<group>"; };
 		A1C0B9ED1CD6870D00B2892D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1C0B9FA1CD68C1500B2892D /* CMPE235_Admin_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMPE235_Admin_App-Bridging-Header.h"; sourceTree = "<group>"; };
 		A1C0B9FB1CD6A2CD00B2892D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A1C0B9FE1CD7264100B2892D /* MaintenanceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceListViewController.swift; sourceTree = "<group>"; };
 		A1C0BA001CD73E9A00B2892D /* MaintenanceRecords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceRecords.swift; sourceTree = "<group>"; };
@@ -127,10 +142,31 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		A1A445781CD82E5700EA7A90 /* SlideOutMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A1A445791CD82EBB00EA7A90 /* SlideViewController.swift */,
+				A1A4457E1CD82F2F00EA7A90 /* SWRevealViewController.m */,
+				A1A445801CD82F6B00EA7A90 /* SWRevealViewController.h */,
+			);
+			name = SlideOutMenu;
+			sourceTree = "<group>";
+		};
+		A1A445811CD8DB6F00EA7A90 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				A1A445821CD8DB9800EA7A90 /* MonitorViewController.swift */,
+				A1A445851CD903BF00EA7A90 /* MonitoringRecords.swift */,
+				A1A445871CD9179E00EA7A90 /* MonitorTableViewCell.swift */,
+				A1A445891CD91AA100EA7A90 /* DetailsViewController.swift */,
+				A1A4458D1CD91CFD00EA7A90 /* VisitorsRecordCell.swift */,
+			);
+			name = Monitor;
+			sourceTree = "<group>";
+		};
 		A1C0B9BD1CD6870D00B2892D = {
 			isa = PBXGroup;
 			children = (
-				A1C0B9FA1CD68C1500B2892D /* CMPE235_Admin_App-Bridging-Header.h */,
 				A1C0B9C81CD6870D00B2892D /* CMPE235_Admin_App */,
 				A1C0B9DF1CD6870D00B2892D /* CMPE235_Admin_AppTests */,
 				A1C0B9EA1CD6870D00B2892D /* CMPE235_Admin_AppUITests */,
@@ -153,6 +189,8 @@
 		A1C0B9C81CD6870D00B2892D /* CMPE235_Admin_App */ = {
 			isa = PBXGroup;
 			children = (
+				A1A445811CD8DB6F00EA7A90 /* Monitor */,
+				A1A445781CD82E5700EA7A90 /* SlideOutMenu */,
 				A1A445751CD8017100EA7A90 /* Login */,
 				A1A4456C1CD7E5BD00EA7A90 /* Registration */,
 				A1C0BA021CD73F8E00B2892D /* Model */,
@@ -164,6 +202,7 @@
 				A1C0B9D71CD6870D00B2892D /* Info.plist */,
 				A1C0B9FB1CD6A2CD00B2892D /* MenuViewController.swift */,
 				A1A445731CD8009F00EA7A90 /* SplashScreen.swift */,
+				A1A445841CD8DD1900EA7A90 /* CMPE235_Admin_App-Bridging-Header.h */,
 			);
 			path = CMPE235_Admin_App;
 			sourceTree = "<group>";
@@ -397,15 +436,22 @@
 			files = (
 				A1C0BA011CD73E9A00B2892D /* MaintenanceRecords.swift in Sources */,
 				A1A445771CD8018800EA7A90 /* LoginController.swift in Sources */,
+				A1A4457A1CD82EBB00EA7A90 /* SlideViewController.swift in Sources */,
+				A1A4458A1CD91AA100EA7A90 /* DetailsViewController.swift in Sources */,
 				A1C0B9CA1CD6870D00B2892D /* AppDelegate.swift in Sources */,
 				A1A4456E1CD7ECC100EA7A90 /* RegistrationModal.swift in Sources */,
 				A1C0BA081CD740E300B2892D /* MaintenanceDetailViewController.swift in Sources */,
 				A1A445701CD7F66F00EA7A90 /* RegisterTree.swift in Sources */,
+				A1A4457F1CD82F2F00EA7A90 /* SWRevealViewController.m in Sources */,
 				A1C0B9FC1CD6A2CD00B2892D /* MenuViewController.swift in Sources */,
 				A1A445741CD8009F00EA7A90 /* SplashScreen.swift in Sources */,
+				A1A445861CD903BF00EA7A90 /* MonitoringRecords.swift in Sources */,
 				A1A445721CD7F68100EA7A90 /* RegisterSensor.swift in Sources */,
 				A1C0BA041CD7400700B2892D /* SmartThings.swift in Sources */,
+				A1A445881CD9179F00EA7A90 /* MonitorTableViewCell.swift in Sources */,
+				A1A4458E1CD91CFD00EA7A90 /* VisitorsRecordCell.swift in Sources */,
 				A1C0B9FF1CD7264100B2892D /* MaintenanceListViewController.swift in Sources */,
+				A1A445831CD8DB9800EA7A90 /* MonitorViewController.swift in Sources */,
 				A1C0BA061CD7407A00B2892D /* MaintenanceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,10 +597,13 @@
 			baseConfigurationReference = 29F59AA0FB4956D571E610AF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CMPE235_Admin_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-Admin-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CMPE235_Admin_App/CMPE235_Admin_App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -563,10 +612,12 @@
 			baseConfigurationReference = 85F11156B2DF6E5E624003CD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CMPE235_Admin_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SJSU.CMPE235-Admin-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CMPE235_Admin_App/CMPE235_Admin_App-Bridging-Header.h";
 			};
 			name = Release;
 		};
