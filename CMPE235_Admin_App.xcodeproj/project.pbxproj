@@ -168,13 +168,6 @@
 			name = Monitor;
 			sourceTree = "<group>";
 		};
-		A1A4458F1CD9770200EA7A90 /* Deploy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Deploy;
-			sourceTree = "<group>";
-		};
 		A1C0B9BD1CD6870D00B2892D = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +193,6 @@
 		A1C0B9C81CD6870D00B2892D /* CMPE235_Admin_App */ = {
 			isa = PBXGroup;
 			children = (
-				A1A4458F1CD9770200EA7A90 /* Deploy */,
 				A1A445811CD8DB6F00EA7A90 /* Monitor */,
 				A1A445781CD82E5700EA7A90 /* SlideOutMenu */,
 				A1A445751CD8017100EA7A90 /* Login */,
