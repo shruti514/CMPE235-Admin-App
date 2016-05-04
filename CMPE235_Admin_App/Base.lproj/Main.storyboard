@@ -90,10 +90,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3u-18-Nui">
-                                <rect key="frame" x="-1" y="0.0" width="414" height="736"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBAckground" translatesAutoresizingMaskIntoConstraints="NO" id="l3u-18-Nui">
+                                <rect key="frame" x="-198" y="-47" width="414" height="736"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Zu-Zf-n5l">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="latestBluebackground" translatesAutoresizingMaskIntoConstraints="NO" id="8Zu-Zf-n5l">
                                 <rect key="frame" x="39" y="103" width="344" height="369"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-xB-zTR">
@@ -107,8 +107,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reL-Yx-Lqg">
-                                <rect key="frame" x="192" y="341" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <rect key="frame" x="157" y="327" width="108" height="41"/>
+                                <state key="normal" backgroundImage="Login"/>
                                 <connections>
                                     <action selector="loginAction:" destination="W9V-3x-n7b" eventType="touchUpInside" id="KJh-dT-rLT"/>
                                 </connections>
@@ -234,22 +234,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ne-euO">
-                                <rect key="frame" x="186" y="184" width="59" height="30"/>
-                                <state key="normal" title="Maintain"/>
+                                <rect key="frame" x="155" y="345" width="105" height="105"/>
+                                <state key="normal" backgroundImage="Maintain"/>
                                 <connections>
                                     <segue destination="cWS-Ao-bPx" kind="show" id="Qcl-D1-wst"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sP9-mO-jPv">
-                                <rect key="frame" x="186" y="335" width="53" height="30"/>
-                                <state key="normal" title="Monitor"/>
+                                <rect key="frame" x="158" y="556" width="105" height="105"/>
+                                <state key="normal" backgroundImage="Monitor"/>
                                 <connections>
                                     <segue destination="H32-68-1hF" kind="show" id="F5k-Vb-hwl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pv-s3-jJn">
-                                <rect key="frame" x="159" y="483" width="112" height="30"/>
-                                <state key="normal" title="Register"/>
+                                <rect key="frame" x="155" y="142" width="105" height="105"/>
+                                <state key="normal" backgroundImage="Register"/>
                                 <connections>
                                     <action selector="RegisterButtonPressed:" destination="a7E-aU-NuN" eventType="touchUpInside" id="dND-zi-PyL"/>
                                 </connections>
@@ -267,6 +267,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9z-nz-ELm">
+                                <rect key="frame" x="175" y="248" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maintenance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="So8-WK-bVg">
+                                <rect key="frame" x="158" y="450" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monitor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR2-T3-qao">
+                                <rect key="frame" x="181" y="663" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -274,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDz-Ii-cT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-926" y="-335"/>
+            <point key="canvasLocation" x="-910" y="-351"/>
         </scene>
         <!--Tree and Sensor Details-->
         <scene sceneID="wdB-xr-Aav">
@@ -323,7 +341,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Tree and Sensor Details" id="O0A-T8-h17">
                         <barButtonItem key="backBarButtonItem" title="Home" id="1hs-K3-YHn"/>
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="arX-zQ-bQt">
+                        <barButtonItem key="leftBarButtonItem" image="BackArr-1" id="arX-zQ-bQt">
+                            <color key="tintColor" red="0.2666666667" green="0.36078431370000003" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="goToHome:" destination="VS8-GQ-MDs" id="pia-cP-bqK"/>
                             </connections>
@@ -349,23 +368,36 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient-stretch" translatesAutoresizingMaskIntoConstraints="NO" id="0I3-gI-0Yz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-8e-FKM">
-                                <rect key="frame" x="162" y="174" width="91" height="30"/>
-                                <state key="normal" title="Register Tree"/>
+                                <rect key="frame" x="130" y="76" width="130" height="130"/>
+                                <state key="normal" backgroundImage="TreeReg-2"/>
                                 <connections>
                                     <action selector="registerTree:" destination="XiQ-OC-5aM" eventType="touchUpInside" id="wyd-LR-Zc0"/>
                                     <segue destination="d7Y-Wj-56V" kind="show" id="KOF-xu-xLu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGZ-3c-6aw">
-                                <rect key="frame" x="153" y="491" width="109" height="30"/>
-                                <state key="normal" title="Register Sensor"/>
+                                <rect key="frame" x="130" y="308" width="130" height="130"/>
+                                <state key="normal" backgroundImage="SensorReg-1"/>
                                 <connections>
                                     <action selector="registerSensor:" destination="XiQ-OC-5aM" eventType="touchUpInside" id="V05-57-b5Z"/>
                                     <segue destination="1Fq-he-kfQ" kind="show" id="fsH-nz-sCD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register Tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lo-bN-E4l">
+                                <rect key="frame" x="144" y="207" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register Sensor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wi8-GX-VE6">
+                                <rect key="frame" x="139" y="439" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -373,7 +405,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipq-UY-c7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="463"/>
+            <point key="canvasLocation" x="309" y="444"/>
         </scene>
         <!--Register Tree-->
         <scene sceneID="YIK-Ct-vyE">
@@ -436,12 +468,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tus-TK-z4m">
-                                <rect key="frame" x="183" y="506" width="49" height="30"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AS-N0-HcL">
-                                <rect key="frame" x="126" y="583" width="163" height="30"/>
-                                <state key="normal" title="Register using QR Code"/>
+                                <rect key="frame" x="151" y="499" width="113" height="47"/>
+                                <state key="normal" backgroundImage="SubmitButton"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ha-KZ-PKZ">
                                 <rect key="frame" x="195" y="554" width="24" height="21"/>
@@ -449,6 +477,10 @@
                                 <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AS-N0-HcL">
+                                <rect key="frame" x="151" y="583" width="113" height="47"/>
+                                <state key="normal" backgroundImage="ScanQRGreen-1"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -530,8 +562,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCJ-mv-wNh">
-                                <rect key="frame" x="177" y="543" width="49" height="30"/>
-                                <state key="normal" title="Submit"/>
+                                <rect key="frame" x="145" y="518" width="113" height="47"/>
+                                <state key="normal" backgroundImage="SubmitButton-1"/>
                                 <connections>
                                     <action selector="submitSensorRegistration:" destination="1Fq-he-kfQ" eventType="touchUpInside" id="m4S-Un-IYg"/>
                                 </connections>
@@ -543,8 +575,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8S-ek-5hC">
-                                <rect key="frame" x="130" y="617" width="166" height="30"/>
-                                <state key="normal" title="Register Using QR Code"/>
+                                <rect key="frame" x="145" y="617" width="113" height="47"/>
+                                <state key="normal" backgroundImage="ScanQRGreen-1"/>
                                 <connections>
                                     <action selector="registerUsingQRCode:" destination="1Fq-he-kfQ" eventType="touchUpInside" id="05D-5W-VfW"/>
                                 </connections>
@@ -579,7 +611,8 @@
                             <color key="backgroundColor" red="0.02352941222" green="0.25490197539999998" blue="0.57254904510000004" alpha="1" colorSpace="calibratedRGB"/>
                             <items>
                                 <navigationItem title="Trees and Sensors" id="Cod-t8-8dB">
-                                    <barButtonItem key="leftBarButtonItem" image="icon-menu" id="cux-Tl-KCw">
+                                    <barButtonItem key="leftBarButtonItem" image="BackArr-1" id="cux-Tl-KCw">
+                                        <color key="tintColor" red="0.2666666667" green="0.36078431370000003" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="barItemButtonPressed:" destination="cWS-Ao-bPx" id="RfK-K8-STO"/>
                                         </connections>
@@ -633,6 +666,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9b-lu-ebq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-437" y="-404"/>
         </scene>
         <!--Sensor Deployment Details-->
@@ -768,6 +802,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dm-PG-HVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="911" y="-638"/>
+=======
+            <point key="canvasLocation" x="-365" y="-468"/>
+>>>>>>> 5b533eb16bdb00d6915f932d1e298118aaf9564f
         </scene>
         <!--View Controller-->
         <scene sceneID="k67-Ac-Cq3">
@@ -865,8 +902,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlZ-X5-Owv">
-                                <rect key="frame" x="172" y="454" width="51" height="30"/>
-                                <state key="normal" title="Update"/>
+                                <rect key="frame" x="151" y="444" width="113" height="47"/>
+                                <state key="normal" backgroundImage="Update"/>
                                 <connections>
                                     <action selector="updateButtonPressed:" destination="FIA-Yb-l8t" eventType="touchUpInside" id="kVt-iN-kLL"/>
                                 </connections>
@@ -1047,7 +1084,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackArr-1" width="46" height="39"/>
         <image name="Horizontal Line Separator " width="363" height="2"/>
+        <image name="Login" width="366" height="150"/>
+        <image name="Maintain" width="396" height="396"/>
+        <image name="Monitor" width="396" height="396"/>
+        <image name="Register" width="396" height="396"/>
+        <image name="ScanQRGreen-1" width="366" height="150"/>
+        <image name="SensorReg-1" width="735" height="693"/>
+        <image name="SubmitButton" width="366" height="150"/>
+        <image name="SubmitButton-1" width="366" height="150"/>
+        <image name="TreeReg-2" width="732" height="714"/>
+        <image name="Update" width="366" height="150"/>
+        <image name="WhiteBAckground" width="414" height="736"/>
         <image name="finalTabbar-1" width="414" height="65"/>
         <image name="gradient-stretch" width="375" height="557"/>
         <image name="icon-menu" width="24" height="15"/>
