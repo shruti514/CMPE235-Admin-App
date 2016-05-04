@@ -635,6 +635,60 @@
             </objects>
             <point key="canvasLocation" x="-319" y="-345"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="k67-Ac-Cq3">
+            <objects>
+                <viewController id="RJ1-mO-7ox" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y7R-eG-c2P"/>
+                        <viewControllerLayoutGuide type="bottom" id="UjB-hC-nY8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M3l-2w-fpR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFP-cA-ITu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCN-fT-hUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="-885"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ydM-Q1-u0O">
+            <objects>
+                <viewController id="fGH-2N-sQ7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4x7-0e-EDl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zOX-rV-QTl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QB4-GR-lfF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipo-MV-qGa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpx-eH-RtI">
+                                <rect key="frame" x="45" y="146" width="17" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coW-kJ-Xl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="-74"/>
+        </scene>
         <!--Maintenance Detail View Controller-->
         <scene sceneID="6Um-Ty-PLy">
             <objects>
@@ -760,7 +814,7 @@
                                 <rect key="frame" x="20" y="341" width="374" height="314"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yq7-lm-kcP" customClass="VisitorsRecordCell" customModule="CMPE235_Admin_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VisitorsRecordCell" id="yq7-lm-kcP" customClass="VisitorsRecordCell" customModule="CMPE235_Admin_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yq7-lm-kcP" id="gh2-k1-piW">

@@ -22,6 +22,7 @@ class MaintenanceListViewController: UITableViewController {
         
     }
     
+   
     
     @IBAction func updateButtonPressed(sender: AnyObject) {
         let point = tableView.convertPoint(CGPointZero, fromView: sender as! UIButton)
@@ -43,9 +44,48 @@ class MaintenanceListViewController: UITableViewController {
     }
     
     @IBAction func barItemButtonPressed(sender: AnyObject) {
+        
     }
     
     @IBAction func deployButtonPressed(sender: AnyObject) {
+        let point = tableView.convertPoint(CGPointZero, fromView: sender as! UIButton)
+        if let indexPath = tableView.indexPathForRowAtPoint(point) {
+            let section = maitenanceRecords[indexPath.section]
+            if(indexPath.section == 0 ){
+                let smartTree = section.records[indexPath.row] as! SmartTrees
+                let treeId = smartTree.id
+                navigateToTreeDeployment(treeId)
+            }
+            if(indexPath.section == 1){
+                let sensor = section.records[indexPath.row] as! Sensors
+                let sensorId = sensor.id
+                navigateToSensorDeployment(sensorId)
+            }
+            
+        }
+        
+    }
+    
+    
+    func navigateToTreeDeployment(treeId:String){
+        let treeDeployment = storyboard?.instantiateViewControllerWithIdentifier("TreeDeployment") as! TreeDeploymentController
+        treeDeployment.modalPresentationStyle = .OverCurrentContext
+        
+        treeDeployment.treeId = treeId
+        
+        self.presentViewController(treeDeployment, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    func navigateToSensorDeployment(sensorId:String){
+        let sensorDeployment = storyboard?.instantiateViewControllerWithIdentifier("SensorDeployment") as! SensorDeploymentController
+        sensorDeployment.modalPresentationStyle = .OverCurrentContext
+        
+        sensorDeployment.sensorId = sensorId
+        
+        self.presentViewController(sensorDeployment, animated: true, completion: nil)
         
         
     }

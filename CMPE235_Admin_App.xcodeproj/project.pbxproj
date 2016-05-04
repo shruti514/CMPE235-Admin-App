@@ -20,6 +20,8 @@
 		A1A445881CD9179F00EA7A90 /* MonitorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445871CD9179E00EA7A90 /* MonitorTableViewCell.swift */; };
 		A1A4458A1CD91AA100EA7A90 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445891CD91AA100EA7A90 /* DetailsViewController.swift */; };
 		A1A4458E1CD91CFD00EA7A90 /* VisitorsRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4458D1CD91CFD00EA7A90 /* VisitorsRecordCell.swift */; };
+		A1A445951CD9790D00EA7A90 /* TreeDeploymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445941CD9790D00EA7A90 /* TreeDeploymentController.swift */; };
+		A1A445971CD9792600EA7A90 /* SensorDeploymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A445961CD9792600EA7A90 /* SensorDeploymentController.swift */; };
 		A1C0B9CA1CD6870D00B2892D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0B9C91CD6870D00B2892D /* AppDelegate.swift */; };
 		A1C0B9D11CD6870D00B2892D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C0B9CF1CD6870D00B2892D /* Main.storyboard */; };
 		A1C0B9D31CD6870D00B2892D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C0B9D21CD6870D00B2892D /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		A1A445871CD9179E00EA7A90 /* MonitorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorTableViewCell.swift; sourceTree = "<group>"; };
 		A1A445891CD91AA100EA7A90 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A1A4458D1CD91CFD00EA7A90 /* VisitorsRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsRecordCell.swift; sourceTree = "<group>"; };
+		A1A445941CD9790D00EA7A90 /* TreeDeploymentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeDeploymentController.swift; sourceTree = "<group>"; };
+		A1A445961CD9792600EA7A90 /* SensorDeploymentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorDeploymentController.swift; sourceTree = "<group>"; };
 		A1C0B9C61CD6870D00B2892D /* CMPE235_Admin_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMPE235_Admin_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C0B9C91CD6870D00B2892D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C0B9D01CD6870D00B2892D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +168,13 @@
 			name = Monitor;
 			sourceTree = "<group>";
 		};
+		A1A4458F1CD9770200EA7A90 /* Deploy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Deploy;
+			sourceTree = "<group>";
+		};
 		A1C0B9BD1CD6870D00B2892D = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +200,7 @@
 		A1C0B9C81CD6870D00B2892D /* CMPE235_Admin_App */ = {
 			isa = PBXGroup;
 			children = (
+				A1A4458F1CD9770200EA7A90 /* Deploy */,
 				A1A445811CD8DB6F00EA7A90 /* Monitor */,
 				A1A445781CD82E5700EA7A90 /* SlideOutMenu */,
 				A1A445751CD8017100EA7A90 /* Login */,
@@ -232,6 +244,8 @@
 				A1C0BA001CD73E9A00B2892D /* MaintenanceRecords.swift */,
 				A1C0BA051CD7407A00B2892D /* MaintenanceTableViewCell.swift */,
 				A1C0BA071CD740E300B2892D /* MaintenanceDetailViewController.swift */,
+				A1A445941CD9790D00EA7A90 /* TreeDeploymentController.swift */,
+				A1A445961CD9792600EA7A90 /* SensorDeploymentController.swift */,
 			);
 			name = Maintenance;
 			sourceTree = "<group>";
@@ -443,6 +457,7 @@
 				A1C0BA081CD740E300B2892D /* MaintenanceDetailViewController.swift in Sources */,
 				A1A445701CD7F66F00EA7A90 /* RegisterTree.swift in Sources */,
 				A1A4457F1CD82F2F00EA7A90 /* SWRevealViewController.m in Sources */,
+				A1A445971CD9792600EA7A90 /* SensorDeploymentController.swift in Sources */,
 				A1C0B9FC1CD6A2CD00B2892D /* MenuViewController.swift in Sources */,
 				A1A445741CD8009F00EA7A90 /* SplashScreen.swift in Sources */,
 				A1A445861CD903BF00EA7A90 /* MonitoringRecords.swift in Sources */,
@@ -452,6 +467,7 @@
 				A1A4458E1CD91CFD00EA7A90 /* VisitorsRecordCell.swift in Sources */,
 				A1C0B9FF1CD7264100B2892D /* MaintenanceListViewController.swift in Sources */,
 				A1A445831CD8DB9800EA7A90 /* MonitorViewController.swift in Sources */,
+				A1A445951CD9790D00EA7A90 /* TreeDeploymentController.swift in Sources */,
 				A1C0BA061CD7407A00B2892D /* MaintenanceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
