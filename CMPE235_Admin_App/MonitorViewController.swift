@@ -59,9 +59,9 @@ class MonitorViewController: UITableViewController {
             
         }
         if(smartThing.status == true){
-            cell.statusImage.image = UIImage(named: "Photo")
+            cell.statusImage.image = UIImage(named: "GREEN")
         }else{
-            cell.statusImage.image = UIImage(named: "About")
+            cell.statusImage.image = UIImage(named: "RED")
         }
         return cell
     }
@@ -95,9 +95,9 @@ class MonitorViewController: UITableViewController {
         detailView.id = tree.id
         detailView.location = tree.location
         if(tree.status == true){
-            detailView.statusImage = UIImage(named:"Photo")
+            detailView.statusImage = UIImage(named:"GREEN")
         }else{
-            detailView.statusImage = UIImage(named:"About")
+            detailView.statusImage = UIImage(named:"RED")
         }
         
         self.presentViewController(detailView, animated: true, completion: nil)
@@ -110,9 +110,9 @@ class MonitorViewController: UITableViewController {
         detailView.id = sensor.id
         detailView.location = sensor.location
         if(sensor.status == true){
-            detailView.statusImage = UIImage(named:"Photo")
+            detailView.statusImage = UIImage(named:"GREEN")
         }else{
-            detailView.statusImage = UIImage(named:"About")
+            detailView.statusImage = UIImage(named:"RED")
         }
         
         self.presentViewController(detailView, animated: true, completion: nil)

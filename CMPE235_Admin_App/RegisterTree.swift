@@ -24,7 +24,12 @@ class RegisterTree : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     var vwQRCode:UIView?
     
     override func viewDidLoad() {
+        let switchDemo=UISwitch(frame:CGRectMake(150, 300, 0, 0));
+        switchDemo.on = false
+        switchDemo.setOn(false, animated: false);
+        self.installed = switchDemo
         self.treeID.text = fourUniqueDigits
+        self.hideKeyboardWhenTappedAround() 
     }
     
     @IBAction func submitTree(sender: UIButton) {
@@ -34,7 +39,7 @@ class RegisterTree : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
         treeRegistration["BatchNumber"] = batchID.text
         treeRegistration["Profile"] = profile.text
         treeRegistration["ManufacturerId"] = manufacturerID.text
-        treeRegistration["Installed"] = installed.on
+        treeRegistration["Installed"] = false
         
         treeRegistration.saveInBackgroundWithBlock {(success:Bool, error:NSError?) in
             if (success) {
@@ -63,13 +68,38 @@ class RegisterTree : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
         
     }
     
+    @IBAction func gotoHome(sender: AnyObject) {
+        if let menu = self.storyboard?.instantiateViewControllerWithIdentifier("MenuView") as? MenuViewController {
+            
+            
+            self.presentViewController(menu, animated: true, completion: nil)
+        }
+        
+    }
+    
+    @IBAction func signout(sender: AnyObject) {
+        // Send a request to log out a user
+        PFUser.logOut()
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            if let loginview = self.storyboard?.instantiateViewControllerWithIdentifier("LoginController") as? LoginController {
+                
+                
+                self.presentViewController(loginview, animated: true, completion: nil)
+            }
+            
+        })
+    }
+
+    
     func reset(){
         
         self.treeID.text = treeID.text
         self.profile.text = ""
         self.manufacturerID.text = ""
         self.batchID.text = ""
-        self.installed.on = true
+        //self.tree.text=""
+        
     }
     
     
@@ -153,7 +183,7 @@ class RegisterTree : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
                 profile.text = dict[0]
                 manufacturerID.text = dict[1]
                 batchID.text = dict[2]
-                installed.on = dict[3] == "true"
+                //installed.on = dict[3] == "true"
                 
                 objCaptureSession?.stopRunning()
                 objCaptureVideoPreviewLayer?.removeFromSuperlayer()
@@ -171,6 +201,17 @@ class RegisterTree : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
             // generate another random number if the set of characters count is less than four
         } while Set<Character>(result.characters).count < 4
         return result    // ran 5 times
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 

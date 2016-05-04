@@ -11,6 +11,7 @@ import Parse
 
 class DetailsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     var location:String! = nil
     var id :String! = nil
     var statusImage: UIImage! = nil
@@ -34,9 +35,41 @@ class DetailsViewController: UIViewController,UITableViewDataSource,UITableViewD
         }
         if(statusImage != nil){
             imageView.image = statusImage
-        }
+        }       
         
-        loadDataFromParse()
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        loadSimpleDataFromParse()
+        tableView?.dataSource = self
+        tableView?.reloadData()   // ...and it is also visible here.
+    }
+    
+    
+    func loadSimpleDataFromParse(){
+        let today = NSDate()
+        let day_1_Query = PFQuery(className:"ProximitySensorRecord")
+        //day_1_Query.whereKey("createdAt", greaterThanOrEqualTo: daysFromNow_1)
+        day_1_Query.whereKey("createdAt", lessThanOrEqualTo: today)
+        
+        
+        day_1_Query.findObjectsInBackgroundWithBlock {
+            (results: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                
+                let visitorCount = VisitorsCount()
+                visitorCount.count = Int((results?.count)!)
+                visitorCount.date = self.getFormatedDate(today)
+                self.visitorsRecord.append(visitorCount)
+                self.tableView?.reloadData()
+                
+            }        }
+        
+        
+        
+        
         
     }
     
@@ -109,8 +142,32 @@ class DetailsViewController: UIViewController,UITableViewDataSource,UITableViewD
     }
     
     
+    @IBAction func gotoHome(sender: AnyObject) {
+        if let menu = self.storyboard?.instantiateViewControllerWithIdentifier("MenuView") as? MenuViewController {
+            
+            
+            self.presentViewController(menu, animated: true, completion: nil)
+        }
+        
+    }
+    
+    @IBAction func signout(sender: AnyObject) {
+        // Send a request to log out a user
+        PFUser.logOut()
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            if let loginview = self.storyboard?.instantiateViewControllerWithIdentifier("LoginController") as? LoginController {
+                
+                
+                self.presentViewController(loginview, animated: true, completion: nil)
+            }
+            
+        })
+    }
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-       return self.visitorsRecord.count
+        return self.visitorsRecord.count
     }
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:

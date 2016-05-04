@@ -17,16 +17,20 @@ class RegisterSensor : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     @IBOutlet weak var sensorType: UITextField!
     @IBOutlet weak var manufacturerID: UITextField!
     @IBOutlet weak var batchID: UITextField!
-    @IBOutlet weak var installed: UISwitch!
+    //@IBOutlet weak var installed: UISwitch!
     @IBOutlet weak var submit: UIButton!
     
-    @IBOutlet weak var sensorDetails: UITextView!
+    @IBOutlet weak var sensorDetailsArea: UITextView!
+    
+    @IBOutlet weak var sensorDetails: UITextField!
+    
     var objCaptureSession:AVCaptureSession?
     var objCaptureVideoPreviewLayer:AVCaptureVideoPreviewLayer?
     var vwQRCode:UIView?
     
     override func viewDidLoad() {
         sensorID.text = fourUniqueDigits
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func submitSensorRegistration(sender: AnyObject) {
@@ -36,7 +40,7 @@ class RegisterSensor : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
         sensorRegistration["SensorType"] = sensorType.text
         sensorRegistration["ManufacturerId"] = manufacturerID.text
         sensorRegistration["BatchNumber"] = batchID.text
-        sensorRegistration["Installed"] = installed.on
+        sensorRegistration["Installed"] = false
         
         
         sensorRegistration.saveInBackgroundWithBlock {(success:Bool, error:NSError?) in
@@ -65,13 +69,39 @@ class RegisterSensor : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
         }
         
     }
+    
+    
+    @IBAction func gotoHome(sender: AnyObject) {
+        if let menu = self.storyboard?.instantiateViewControllerWithIdentifier("MenuView") as? MenuViewController {
+            
+            
+            self.presentViewController(menu, animated: true, completion: nil)
+        }
+        
+    }
+    
+    @IBAction func signout(sender: AnyObject) {
+        // Send a request to log out a user
+        PFUser.logOut()
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            if let loginview = self.storyboard?.instantiateViewControllerWithIdentifier("LoginController") as? LoginController {
+                
+                
+                self.presentViewController(loginview, animated: true, completion: nil)
+            }
+            
+        })
+    }
+
     func reset(){
         
         self.sensorID.text = self.sensorID.text
         self.sensorType.text = ""
         self.manufacturerID.text = ""
         self.batchID.text = ""
-        self.installed.on = true
+        self.sensorDetails.text=""
+        //self.installed.on = true
         
     }
     
@@ -157,7 +187,7 @@ class RegisterSensor : UIViewController, AVCaptureMetadataOutputObjectsDelegate{
                 sensorType.text = dict[0]
                 manufacturerID.text = dict[1]
                 batchID.text = dict[2]
-                installed.on = dict[3] == "true"
+                //installed.on = dict[3] == "true"
                 
                 objCaptureSession?.stopRunning()
                 objCaptureVideoPreviewLayer?.removeFromSuperlayer()

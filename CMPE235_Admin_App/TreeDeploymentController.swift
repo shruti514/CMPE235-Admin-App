@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class TreeDeploymentController: UIViewController {
-
+    
     var treeId:String!
     
     @IBOutlet weak var treeID: UITextField!
@@ -19,7 +19,7 @@ class TreeDeploymentController: UIViewController {
     
     @IBOutlet weak var status: UISwitch!
     
-   
+    
     @IBAction func deployTree(sender: AnyObject) {
         
         let deploy = PFObject(className: "TreeDeployment")
@@ -49,7 +49,7 @@ class TreeDeploymentController: UIViewController {
                     style: UIAlertActionStyle.Default,
                     handler: {(alert: UIAlertAction!) in print("Fail Alert Shown")}))
                 self.presentViewController(alert, animated: true, completion: nil)
-                self.reset()
+                // self.reset()
                 
                 
             }
@@ -57,9 +57,27 @@ class TreeDeploymentController: UIViewController {
         
         
     }
-
+    @IBAction func gotoHome(sender: AnyObject) {
+        if let menu = self.storyboard?.instantiateViewControllerWithIdentifier("MenuView") as? MenuViewController {
+            
+            
+            self.presentViewController(menu, animated: true, completion: nil)
+        }
         
+    }
+    
+    @IBAction func signout(sender: AnyObject) {
+        // Send a request to log out a user
+        PFUser.logOut()
         
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            if let loginview = self.storyboard?.instantiateViewControllerWithIdentifier("LoginController") as? LoginController {
+                
+                
+                self.presentViewController(loginview, animated: true, completion: nil)
+            }
+            
+        })
     }
 
     func reset()
@@ -67,38 +85,10 @@ class TreeDeploymentController: UIViewController {
         treeID.text = ""
         installedDate.text = ""
         Location.text = ""
-         status.on = true
-    
-     }
-
-
-
-
-
-    override func viewDidLoad() {
-       
-        if(self.treeId != nil ){
-            let query = PFQuery(className: "TreeRegistration")
-            query.whereKey("TreeId", equalTo: treeId)
-            query.findObjectsInBackgroundWithBlock {
-                (results: [PFObject]?, error: NSError?) -> Void in
-                if error == nil {
-                    if(results?.count>0){
-                        var tree = results![0]
-                        if(tree["Installed"] as! Bool == true){
-                            let deploymentQuery = PFQuery(className: "Deployment")
-                            
-                        }
-                    
-                    }
-                    
-                    
-               
-            }
-
-        }
+        status.on = true
         
     }
+    
     
 }
 
